@@ -3,8 +3,11 @@
 Small 2D Platformer game made on Unity.
 ## Controls
 W,A,S,D - Move
+
 Space - Jump
+
 Escape - Pause menu
+
 ## Contributing
 We welcome contributions from anyone who is interested in helping improve our game. If you'd like to contribute, there are a few ways to get involved:
 1. Fork this repository
