@@ -6,6 +6,8 @@ W,A,S,D - Move
 
 Space - Jump
 
+Right click - Fire
+
 Escape - Pause menu
 
 ## Contributing

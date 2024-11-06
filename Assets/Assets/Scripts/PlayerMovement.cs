@@ -18,6 +18,11 @@ public class PlayerMovement : MonoBehaviour
     private float jumpingPower = 16f;
     private bool isFacingRight = true;
 
+    public Transform fireSpawn;
+    public GameObject bulletPrefab;
+    [SerializeField]
+    private float bulletSpeed = 15f;
+
     // Update is called once per frame
     void Update()
     {
@@ -32,6 +37,7 @@ public class PlayerMovement : MonoBehaviour
             Flip();
         }
     }
+    
     public void Jump(InputAction.CallbackContext context)
     {
         if (context.performed && isGrounded())
@@ -54,12 +60,29 @@ public class PlayerMovement : MonoBehaviour
     {
         horizontal = context.ReadValue<Vector2>().x;
     }
+    
     private void Flip()
     {
         isFacingRight = !isFacingRight;
         Vector3 localScale = transform.localScale;
         localScale.x *= -1f;
         transform.localScale = localScale;
+    }
+
+    public void Fire(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            GameObject bullet = Instantiate(bulletPrefab, fireSpawn.position, fireSpawn.rotation);
+            Rigidbody2D bulletRb = bullet.GetComponent<Rigidbody2D>();
+            float fireDirection;
+            if (isFacingRight)
+                fireDirection = 1f;
+            else
+                fireDirection = -1f;
+            bulletRb.velocity = new Vector2(fireDirection * bulletSpeed, 0f);
+            Destroy(bullet, 1f);
+        }
     }
 
 }
