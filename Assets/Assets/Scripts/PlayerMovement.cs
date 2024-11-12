@@ -21,7 +21,7 @@ public class PlayerMovement : MonoBehaviour
     public Transform fireSpawn;
     public GameObject bulletPrefab;
     [SerializeField]
-    private float bulletSpeed = 15f;
+    private float bulletSpeed = 12f;
 
     // Update is called once per frame
     void Update()
@@ -81,7 +81,7 @@ public class PlayerMovement : MonoBehaviour
             else
                 fireDirection = -1f;
             bulletRb.velocity = new Vector2(fireDirection * bulletSpeed, 0f);
-            Destroy(bullet, 1f);
+            Destroy(bullet, 0.5f);
         }
     }
 
