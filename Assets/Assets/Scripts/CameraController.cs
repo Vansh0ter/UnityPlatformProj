@@ -4,14 +4,8 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    [SerializeField] private Transform player;
+    public Transform player;
     private Vector3 position;
-
-    private void Awake()
-    {
-        if (!player)
-            player = FindObjectOfType<PlayerMovement>().transform;
-    }
 
     private void Update()
     {
