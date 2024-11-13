@@ -13,7 +13,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private float speed = 8f;
     private float horizontal;
-    
+
     [SerializeField]
     private float jumpingPower = 16f;
     private bool isFacingRight = true;
@@ -37,7 +37,7 @@ public class PlayerMovement : MonoBehaviour
             Flip();
         }
     }
-    
+
     public void Jump(InputAction.CallbackContext context)
     {
         if (context.performed && isGrounded())
@@ -60,7 +60,7 @@ public class PlayerMovement : MonoBehaviour
     {
         horizontal = context.ReadValue<Vector2>().x;
     }
-    
+
     private void Flip()
     {
         isFacingRight = !isFacingRight;
@@ -84,5 +84,4 @@ public class PlayerMovement : MonoBehaviour
             Destroy(bullet, 0.5f);
         }
     }
-
 }
