@@ -1,6 +1,10 @@
 # Unity Platformer
 ## What is this ? 
 Small 2D Platformer game made on Unity.
+
+## Usage
+Download latest build from "Releases" page. Launch ```My project (3).exe``` to start.
+
 ## Controls
 W,A,S,D - Move
 
@@ -9,6 +13,8 @@ Space - Jump
 Left click - Fire
 
 Escape - Pause menu
+
+
 
 ## Contributing
 We welcome contributions from anyone who is interested in helping improve our game. If you'd like to contribute, there are a few ways to get involved:
