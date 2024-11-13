@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody2D rb;
     public Transform groundCheck;
     public LayerMask groundLayer;
+    public CoinManager cm;
     [SerializeField]
     private float speed = 8f;
     private float horizontal;
@@ -82,6 +83,14 @@ public class PlayerMovement : MonoBehaviour
                 fireDirection = -1f;
             bulletRb.velocity = new Vector2(fireDirection * bulletSpeed, 0f);
             Destroy(bullet, 0.5f);
+        }
+    }
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if(other.gameObject.CompareTag("Coin")) 
+        {
+            Destroy(other.gameObject);
+            cm.coinCount++;
         }
     }
 }
