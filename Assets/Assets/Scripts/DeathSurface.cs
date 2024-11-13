@@ -20,7 +20,6 @@ public class deadlyscript : MonoBehaviour
     {
 
         Destroy(other.gameObject);
-        Debug.Log("player died");
 
     }
 }

@@ -28,6 +28,7 @@ public class CoinManager : MonoBehaviour
         coinText.enabled = false;
         resultsText.enabled = true;
         resultsText.text = "Star Count: " + coinCount.ToString();
+        // SaveGame();
         StartCoroutine(Transition());
     }
     private IEnumerator Transition()
@@ -35,4 +36,21 @@ public class CoinManager : MonoBehaviour
         yield return new WaitForSeconds(transitionTime);
         SceneManager.LoadSceneAsync(1);
     }
+    /*private void SaveGame()
+    {
+        SaveData saveData = new SaveData(5);
+        saveData.coins[0] = coinCount;
+        saveData.levels[1] = 1;
+
+        SaveManager.SaveGameState(saveData);
+        Debug.Log("Game Saved");
+    }
+    private void LoadGame()
+    {
+        SaveData saveData = SaveManager.LoadGameState();
+        if(saveData != null)
+        {
+            Debug.Log("Game Loaded");
+        }
+    }*/
 }
