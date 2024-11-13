@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Windows;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -14,6 +15,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private float speed = 8f;
     private float horizontal;
+    [SerializeField]
+    private InputActionAsset inputAction;
 
     [SerializeField]
     private float jumpingPower = 16f;
@@ -91,6 +94,11 @@ public class PlayerMovement : MonoBehaviour
         {
             Destroy(other.gameObject);
             cm.coinCount++;
+        }
+        if(other.gameObject.CompareTag("Flag")) 
+        {
+            inputAction.Disable();
+            cm.Results();
         }
     }
 }
