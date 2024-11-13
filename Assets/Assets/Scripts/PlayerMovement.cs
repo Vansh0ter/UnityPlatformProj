@@ -4,16 +4,20 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Windows;
 
 public class PlayerMovement : MonoBehaviour
 {
     public Rigidbody2D rb;
     public Transform groundCheck;
     public LayerMask groundLayer;
+    public CoinManager cm;
     [SerializeField]
     private float speed = 8f;
     private float horizontal;
-    
+    [SerializeField]
+    private InputActionAsset inputAction;
+
     [SerializeField]
     private float jumpingPower = 16f;
     private bool isFacingRight = true;
@@ -37,7 +41,7 @@ public class PlayerMovement : MonoBehaviour
             Flip();
         }
     }
-    
+
     public void Jump(InputAction.CallbackContext context)
     {
         if (context.performed && isGrounded())
@@ -60,7 +64,7 @@ public class PlayerMovement : MonoBehaviour
     {
         horizontal = context.ReadValue<Vector2>().x;
     }
-    
+
     private void Flip()
     {
         isFacingRight = !isFacingRight;
@@ -84,5 +88,17 @@ public class PlayerMovement : MonoBehaviour
             Destroy(bullet, 0.5f);
         }
     }
-
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Coin"))
+        {
+            Destroy(other.gameObject);
+            cm.coinCount++;
+        }
+        if (other.gameObject.CompareTag("Flag"))
+        {
+            inputAction.Disable();
+            cm.Results();
+        }
+    }
 }
