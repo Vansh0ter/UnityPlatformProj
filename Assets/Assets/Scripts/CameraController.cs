@@ -12,7 +12,7 @@ public class CameraController : MonoBehaviour
         position = player.position;
         position.z = -10f;
         position.x = player.position.x;
-        if (player.position.y < 2f)
+        if (player.position.y < 1.2f)
             position.y = 0f;
         else
             position.y = player.position.y;
