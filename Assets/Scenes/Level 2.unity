@@ -14319,7 +14319,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinCount: 0
-  nextScene: 3
+  nextScene: 2
   coinText: {fileID: 147238366}
   resultsText: {fileID: 1702344744}
   transitionTime: 5
@@ -27229,7 +27229,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3413855980509868607, guid: 87afe0dc238789e41aada84e6817da6f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -44.93
+      value: -45.84
       objectReference: {fileID: 0}
     - target: {fileID: 3413855980509868607, guid: 87afe0dc238789e41aada84e6817da6f, type: 3}
       propertyPath: m_LocalPosition.y

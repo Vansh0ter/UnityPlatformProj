@@ -90,12 +90,12 @@ public class PlayerMovement : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.gameObject.CompareTag("Coin")) 
+        if (other.gameObject.CompareTag("Coin"))
         {
             Destroy(other.gameObject);
             cm.coinCount++;
         }
-        if(other.gameObject.CompareTag("Flag")) 
+        if (other.gameObject.CompareTag("Flag"))
         {
             inputAction.Disable();
             cm.Results();
