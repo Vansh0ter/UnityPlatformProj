@@ -8,6 +8,7 @@ using UnityEngine.UI;
 public class CoinManager : MonoBehaviour
 {
     public int coinCount;
+    public int nextScene;
     public TextMeshProUGUI coinText;
     public TextMeshProUGUI resultsText;
     public float transitionTime;
@@ -34,7 +35,7 @@ public class CoinManager : MonoBehaviour
     private IEnumerator Transition()
     {
         yield return new WaitForSeconds(transitionTime);
-        SceneManager.LoadSceneAsync(1);
+        SceneManager.LoadSceneAsync(nextScene);
     }
     /*private void SaveGame()
     {
