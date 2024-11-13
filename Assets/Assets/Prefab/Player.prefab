@@ -289,6 +289,7 @@ MonoBehaviour:
     m_Bits: 64
   cm: {fileID: 0}
   speed: 8
+  inputAction: {fileID: 0}
   jumpingPower: 10
   fireSpawn: {fileID: 324125975736041808}
   bulletPrefab: {fileID: 2897844266114976190, guid: d336536d708715540a5a9b7bb23ce600, type: 3}
@@ -414,6 +415,7 @@ GameObject:
   - component: {fileID: 8216787259579424848}
   - component: {fileID: 204805535128775508}
   - component: {fileID: 6668539355137781655}
+  - component: {fileID: 8955985693208383945}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -508,3 +510,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 8942595710217391389}
+--- !u!114 &8955985693208383945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8922478510894131904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a160d838ff8b4b4693ac20007e008c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AssetsPPU: 100
+  m_RefResolutionX: 1280
+  m_RefResolutionY: 720
+  m_UpscaleRT: 0
+  m_PixelSnapping: 0
+  m_CropFrameX: 0
+  m_CropFrameY: 0
+  m_StretchFill: 0

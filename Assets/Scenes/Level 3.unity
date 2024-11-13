@@ -913,7 +913,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinCount: 0
-  nextScene: 3
+  nextScene: 4
   coinText: {fileID: 1475778321}
   resultsText: {fileID: 408053059}
   transitionTime: 5

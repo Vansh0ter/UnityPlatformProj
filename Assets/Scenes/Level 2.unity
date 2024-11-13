@@ -14319,7 +14319,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinCount: 0
-  nextScene: 2
+  nextScene: 3
   coinText: {fileID: 147238366}
   resultsText: {fileID: 1702344744}
   transitionTime: 5
