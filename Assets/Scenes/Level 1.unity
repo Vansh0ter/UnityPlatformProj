@@ -24641,6 +24641,14 @@ PrefabInstance:
       propertyPath: m_BackGroundColor.r
       value: 0.5372549
       objectReference: {fileID: 0}
+    - target: {fileID: 8955985693208383945, guid: 87afe0dc238789e41aada84e6817da6f, type: 3}
+      propertyPath: m_RefResolutionX
+      value: 1920
+      objectReference: {fileID: 0}
+    - target: {fileID: 8955985693208383945, guid: 87afe0dc238789e41aada84e6817da6f, type: 3}
+      propertyPath: m_RefResolutionY
+      value: 1080
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
