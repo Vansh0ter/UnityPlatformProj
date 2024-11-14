@@ -366,11 +366,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 9f3780e4b8b804f479dd78dac23428d4, type: 3}
+  m_audioClip: {fileID: 8300000, guid: d22becf61c26d5148a2ccb632d1f7a19, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
