@@ -3,7 +3,7 @@
 Small 2D Platformer game made on Unity.
 
 ## Usage
-Download latest build from "Releases" page. Launch ```My project (3).exe``` to start.
+Download latest build from "Releases" page. Launch ```Platformer.exe``` to start.
 
 ## Controls
 W,A,S,D - Move
