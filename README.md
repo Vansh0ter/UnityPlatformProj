@@ -12,7 +12,7 @@ Space - Jump
 
 Left click - Fire
 
-Escape - Pause menu
+Escape - Main menu
 
 
 
