@@ -24,8 +24,13 @@ public class deadlyscript : MonoBehaviour
         if(other.CompareTag("Player"))
         {
             Destroy(other.gameObject);
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            StartCoroutine(LoadScene());
         }
 
+    }
+    public IEnumerator LoadScene()
+    {
+        yield return new WaitForSeconds(2);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
