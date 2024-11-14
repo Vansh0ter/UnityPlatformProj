@@ -49,7 +49,7 @@ public class PlayerMovement : MonoBehaviour
         {
             Flip();
         }
-        if(horizontal != 0)
+        if (horizontal != 0)
         {
             anim.SetBool("isRunning", true);
         }
@@ -57,6 +57,7 @@ public class PlayerMovement : MonoBehaviour
         {
             anim.SetBool("isRunning", false);
         }
+        anim.SetBool("isJumping", !isGrounded());
     }
 
     public void Jump(InputAction.CallbackContext context)
