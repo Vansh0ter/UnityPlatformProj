@@ -19,6 +19,7 @@ public class PlayerMovement : MonoBehaviour
     private float horizontal;
     [SerializeField]
     private InputActionAsset inputAction;
+    private Animator anim;
 
     [SerializeField]
     private float jumpingPower = 16f;
@@ -28,6 +29,12 @@ public class PlayerMovement : MonoBehaviour
     public GameObject bulletPrefab;
     [SerializeField]
     private float bulletSpeed = 12f;
+
+
+    void Start()
+    {
+        anim = GetComponent<Animator>();
+    }
 
     // Update is called once per frame
     void Update()
@@ -41,6 +48,14 @@ public class PlayerMovement : MonoBehaviour
         else if (isFacingRight && horizontal < 0f)
         {
             Flip();
+        }
+        if(horizontal != 0)
+        {
+            anim.SetBool("isRunning", true);
+        }
+        else
+        {
+            anim.SetBool("isRunning", false);
         }
     }
 
