@@ -5,6 +5,8 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Windows;
+using UnityEngine.SceneManagement;
+
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -88,6 +90,13 @@ public class PlayerMovement : MonoBehaviour
             Destroy(bullet, 0.5f);
         }
     }
+
+    public void EscapeFromLevel(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+            SceneManager.LoadSceneAsync(0);
+    }
+    
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Coin"))
